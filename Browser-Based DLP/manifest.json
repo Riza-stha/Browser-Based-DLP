@@ -1,0 +1,31 @@
+{
+    "manifest_version": 3,
+    "name": "Browser-Based DLP",
+    "version": "1.0",
+    "description": "Monitors and prevents unauthorized copy-pasting of sensitive data and automatically logs out users after inactivity, Prevents unauthorized screenshots, Alerts on every form submission, Prevents  download anf transfer of file, URL filtering.",
+    "permissions": ["clipboardRead", "clipboardWrite", "storage", "tabs", "activeTab", "scripting", "declarativeNetRequest"],
+    "host_permissions": [ "*://*/*"],
+    "background": {
+    "service_worker": "background.js"
+   },
+    
+    "content_scripts": [
+        {
+            "matches": ["*://*/*"],
+            "js": ["content.js"],
+            "run_at": "document_idle"
+        }
+    ],
+
+    "declarative_net_request": {
+      "rule_resources": [{
+        "id": "ruleset_1",
+        "enabled": false,
+        "path": "rules.json"
+      }]
+    },
+    "action": {
+  "default_popup": "popup.html",
+  "default_icon": "icon.png"
+}
+}

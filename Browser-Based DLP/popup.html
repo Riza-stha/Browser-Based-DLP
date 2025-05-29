@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>Browser-Based DLP</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <img src="icon.png" alt="Logo" class="logo">
+      <h1>Browser-Based DLP</h1>
+    </div>
+
+    <div class="feature">
+      <span>Screenshot Blocking</span>
+      <label class="switch">
+        <input type="checkbox" id="screenshotToggle" />
+        <span class="slider round"></span>
+      </label>
+    </div>
+
+    <div class="feature">
+      <span>Clipboard Blocking</span>
+      <label class="switch">
+        <input type="checkbox" id="clipboardToggle" />
+        <span class="slider round"></span>
+      </label>
+    </div>
+
+    <div class="feature">
+      <span>File Transfer Restriction</span>
+      <label class="switch">
+        <input type="checkbox" id="fileTransferToggle" />
+        <span class="slider round"></span>
+      </label>
+    </div>
+    
+    <div class="feature">
+      <span>Download Restriction</span>
+      <label class="switch">
+        <input type="checkbox" id="downloadToggle" />
+        <span class="slider round"></span>
+      </label>
+    </div>
+
+    <div class="feature">
+        <span>URL Filtering</span>
+        <label class="switch">
+          <input type="checkbox" id="blockSocialToggle" />
+          <span class="slider round"></span>
+        </label>
+      </div>
+  
+    <div class="feature">
+      <span>User Inactivity</span>
+      <label class="switch">
+        <input type="checkbox" id="inactivityToggle" />
+        <span class="slider round"></span>
+      </label>
+    </div>
+
+    <div class="feature">
+      <span>Form Alert</span>
+      <label class="switch">
+        <input type="checkbox" id="alertToggle" />
+        <span class="slider round"></span>
+      </label>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
